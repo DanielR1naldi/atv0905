@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Datas em JavaScript</title>
+</head>
+<body>
+    <h1>Trabalhando com Datas em JavaScript</h1>
+
+    <div id="resultado1"></div>
+    <div id="resultado2"></div>
+    <div id="resultado3"></div>
+
+    <script src="index.js"></script>
+
+    <script>
+        
+        function mostrarResultado(idDiv, resultado) {
+            const outputDiv = document.getElementById(idDiv);
+            outputDiv.innerText = resultado;
+        }
+
+        const data1 = new Date('2023-01-01');
+        const data2 = new Date('2023-02-01');
+        mostrarResultado("resultado1", "Data maior: " + dataMaior(data1, data2));
+
+        const datAntiga = new Date('2023-01-01');
+        const datNova = new Date('2023-02-01');
+        mostrarResultado("resultado2", "Intervalo: " + calcularIntervalo(datAntiga, datNova) + " dias");
+
+        mostrarResultado("resultado3", "Data atual formatada: " + dataAtualFormatada());
+    </script>
+</body>
+</html>
